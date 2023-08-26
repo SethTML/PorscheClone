@@ -1,0 +1,1306 @@
+body{
+    margin:0;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    padding:0px;
+}
+
+@keyframes fadeIn {
+ from {
+   opacity: 0;
+ }
+ to {
+   opacity: 1;
+ }
+}
+
+.fade-in {
+  animation: fadeIn 2s; /* Change the duration as per your preference */
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.Hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./Images/TaycanBlue.PNG");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HeroEffects{
+    position: absolute;
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgb(14, 14, 14),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgb(14,14,14))
+}
+
+.Header{
+    width: 85%;
+    height: 90px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeaderMenu{
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: background-color .5s;
+}
+
+.HeaderMenu:hover{
+    background-color: rgba(80, 80, 80, 0.507);
+}
+
+.HeaderMenuButton{
+    width: 37px;
+    height: 37px;
+    background-size: cover;
+}
+
+.HMBSVG{
+    width: 100%;
+    height: 100%;
+}
+
+.HeaderMenuFont{
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: white;
+}
+
+.HeaderLogo1{
+    width: 240px;
+    fill: white;
+    cursor: pointer;
+    margin-right: auto;
+    position: absolute;
+}
+
+.HeaderLogo2{
+    display:none;
+    width: 30px;
+    cursor: pointer;
+    margin-right: auto;
+    position: absolute;
+}
+
+.HeaderSearch{
+    background-image: url('./Images/search.png');
+    background-size: 80% 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+    border-radius: 5px;
+    transition: background-color .5s;
+    margin-right: 10px;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.HeaderSearch:hover{
+    background-color: rgba(80, 80, 80, 0.507);
+}
+
+.HeaderProfile{
+    background-image: url('./Images/profile.png');
+    background-size: cover;
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+    border-radius: 5px;
+    transition: background-color .5s;
+}
+
+.HeaderProfile:hover{
+    background-color: rgba(80, 80, 80, 0.507);
+}
+
+@media (max-width: 950px){
+
+    .HeaderSearch{
+        width: 28px;
+        height: 28px;
+    }
+
+    .HeaderProfile{
+        width: 28px;
+        height: 28px;
+    }
+
+    .HeaderMenuButton{
+        width: 28px;
+        height: 28px;
+    }
+
+    .HeaderLogo1{
+        display: none;
+    }
+    .HeaderLogo2{
+        display: block;
+    }
+}
+
+.HeroContent{
+    width: 100%;
+    height: 350px;
+    margin-top: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+    z-index: 3;
+}
+
+.HeroContentCol{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.HeroProduct{
+    font-family: 'Roboto';
+    font-size: 110px;
+    color: white;
+}
+
+.HeroDesc{
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 80%;
+    height: 55px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background-color .5s,border .5s;
+}
+
+.HeroDesc:hover{
+    background-color: rgba(255, 255, 255, 0.623);
+    border: 2px solid rgba(151, 151, 151, 0.911);
+}
+
+.HeroVideo{
+    height: 100%;
+    max-width: 1920px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.VideoButton{
+    min-width: 60px;
+    min-height: 60px;
+    border: 2px solid white;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 5%;
+    border-radius: 1px;
+    z-index: 3;
+    background-size: 40% 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+.PauseBG{
+    background-image: url("./Images/pause.png");
+}
+
+.PlayBG{
+    background-image: url("./Images/play.png");
+}
+
+.VideoButton:hover{
+    background-color: rgba(80, 80, 80, 0.507);
+}
+
+@media (max-width:950px){
+    .HeroProduct{
+        font-size: 55px;
+    }
+
+    .HeroDesc{
+        font-size: 18px;
+        width: 100%;
+        height: 40%;
+        border: 3px solid white;
+        border-radius: 7px;
+    }
+
+    .HeroContent{
+        margin-bottom:30px ;
+        align-items: center;
+    }
+
+    .HeroContentCol{
+        width: 90%;
+        height: 50%;
+        margin-left: 0px;
+        margin-top: 120px;
+    }
+
+    .VideoButton{
+        min-width: 35px;
+        min-height: 35px;
+        background-size: 80% 80%;
+    }
+
+    .Hero{
+        background-image: none;
+    }
+
+    .HeroVideo{
+
+    }
+
+    .HeroEffects{
+        background: linear-gradient(to bottom, rgb(14, 14, 14),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgb(41, 41, 41))
+    }
+}
+
+/*   ____________   */
+
+.Featured{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FeaturedView{
+    width: 68%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FeaturedItem{
+    width:31%;
+    height: 16vw;
+    max-height: 450px;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+    transition: background-size .35s;
+}
+
+.FeaturedItem:hover{
+    background-size: 107% 107%;
+}
+
+.carPaint{
+    background-image: url("./Images/carpaint.PNG");
+}
+
+.carMeet{
+    background-image: url("./Images/carmeet.PNG");
+}
+
+.carDriver{
+    background-image: url("./Images/cardriver.PNG");
+}
+
+.FeaturedItemContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 24px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(29, 29, 29, 0.884));
+}
+
+.FeaturedItemWrapper{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.FeaturedItemFont{
+    font-family: 'Roboto';
+    color:white;
+    font-size: 20px;
+}
+
+.FeaturedItemButton{
+    height: 34px;
+    max-width: 34px;
+    min-width: 34px;
+    fill: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.FeaturedItemButton:hover{
+    background-color: rgb(80, 80, 80);
+}
+
+.FeaturedModels{
+    width: 68%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ModelCrumb{
+    font-size: 48px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-bottom: 75px;
+    margin-top: 50px;
+}
+
+.ModelGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.Model{
+    width: 48%;
+    height: 42vw;
+    max-height: 850px;
+    background-repeat: no-repeat;
+    transition: background-size .3s;
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 2.5vw;
+    cursor: pointer;
+}
+
+.Model:hover{
+    background-size: 105% 105%;
+}
+
+.ModelWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgb(39, 39, 39)) ;
+}
+
+.ModelContent{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ModelLogo{
+    width: 130px;
+    height: 50px;
+    margin-bottom: auto;
+    fill: white;
+}
+
+.ModelInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 40%;
+}
+
+.ModelDesc{
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 2%;
+}
+
+.ModelPrice{
+    color: rgb(250,250,250);
+    font-size: 15px;
+    font-family: 'Poppins';
+    margin-bottom: 2.5%;
+}
+
+.ModelBuild{
+    height: 44%;
+    width: 100%;
+    font-family: 'Roboto';
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color .25s;
+    cursor:pointer;
+}
+
+.ModelBuild:hover{
+    background-color: rgb(175, 175, 175);
+}
+
+.ModelAll{
+    height: 44%;
+    width: 100%;
+    font-family: 'Roboto';
+    border: 1px solid white;
+    border-radius: 5px;
+    color:white;
+    font-size: 16px;
+    transition: background-color .25s;
+    cursor:pointer;
+}
+
+.ModelAll:hover{
+    background-color: rgb(175, 175, 175);
+}
+
+.ModelButtons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    color:white;
+}
+
+.FeaturedFine{
+    color: rgb(80, 80, 80);
+    font-size: 12px;
+    margin-right: auto;
+}
+
+@media (max-width:950px){
+    .FeaturedView{
+        flex-direction: column;
+    }
+
+    .FeaturedItem{
+        width: 100%;
+        height: 50vw;
+        margin-bottom: 20px;
+    }
+
+    .Model{
+        width: 100%;
+        height: 100vw;
+    }
+
+    .ModelInfo{
+        height: 50%;
+    }
+
+    .ModelDesc{
+        font-size: 18px;
+    }
+}
+
+.Locate{
+    width: 100%;
+}
+
+.FindDealer{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DealerBox{
+    width: 80%;
+    height: 62%;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+}
+
+.DealerInfo{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DealerInfoContent{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.DealerTitle{
+    font-size: 34px;
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+
+.DealerDesc{
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: white;
+    margin-bottom: 6%;
+}
+
+.DealerImg{
+    width: 55%;
+    height: 100%;
+    background-image: url("./Images/porschedealer.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.DealerButton{
+    width: 30%;
+    height: 20%;
+    min-height: 45px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Roboto';
+    transition: background-color .25s;
+    cursor: pointer;
+}
+
+.DealerButton:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+@media (max-width:750px){
+    .DealerBox{
+        flex-direction: column-reverse;
+        height: 70%;
+    }
+
+    .DealerInfo{
+        width: 100%;
+        height: 50%;
+    }
+
+    .DealerImg{
+        width: 100%;
+        height: 50%;
+    }
+
+    .DealerTitle{
+        font-size: 24px;
+    }
+
+    .DealerDesc{
+        font-size: 14px;
+    }
+
+    .DealerButton{
+        width: 100%;
+        height: 30%;   
+    }
+}
+
+.FindLocation{
+    width: 100%;
+    height: 700px;
+    display: flex;
+}
+
+.FindContent{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.FindContentWrapper{
+    width: 65%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.FindContentTitle{
+    font-size: 36px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: black;
+}
+
+.FindContentDesc{
+    font-size: 18px;
+    margin-top: 5px;
+    font-family: 'Roboto';
+    color: rgb(12, 12, 12);
+    margin-bottom: 50px;
+}
+
+.DealerInputText{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    color: rgb(12, 12, 12);
+}
+
+.FindImg{
+    width: 50%;
+    height: 100%;
+    background-image: url("./Images/CarsBG.PNG");
+    background-size: 95% 85%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#DealerInputBox{
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid rgb(100,100,100);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.DealerInputImage{
+    height: 50%;
+    width: 10%;
+    fill: rgb(100,100,100);
+}
+
+#DealerInput{
+    border:none;
+    height: 100%;
+    width: 90%;
+    font-family: 'Roboto';
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width:750px) {
+    .FindLocation{
+        flex-direction: column;
+    }
+
+    .FindContent{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+
+    .FindContentWrapper{
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .FindContentTitle{
+        font-size: 28px;
+    }
+
+    .FindContentDesc{
+        font-size: 16px;
+    }
+
+    .DealerInputText{
+        font-size: 16px;
+    }
+
+    .FindImg{
+        width: 100%;
+        height: 50%;
+        background-size: cover;
+    }
+}
+
+.Shop{
+    width: 100%;
+    height: 800px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ShopContentTitle{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.ShopContentButtons{
+    width: 90px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 60%;
+}
+
+.ShopContentButtonBack{
+    width: 50%;
+    height: 100%;
+    background-image: url("./Images/arrow.svg");
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .4s;
+    transform: rotate(180deg);
+}
+
+.ShopContentButtonBack:hover{
+    background-color: rgba(80, 80, 80, 0.307);
+}
+
+.ShopContentButtonForward{
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    background-image: url("./Images/arrow.svg");
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.ShopContentButtonForward:hover{
+    background-color: rgba(80, 80, 80, 0.307);
+}
+
+.ShopItemCarousel{
+    height: 55%;
+    width: 100%;
+    display: flex;
+    padding-right: 50px;
+    transition: all 1.2;
+}
+
+.ShopItemIndicator{
+    width: 110px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.ShopItemIndicator div{
+    transition: all 0.5s;
+}
+
+.ShopItemLevel{
+    height: 8px;
+    width: 11px;
+    border-radius: 10px;
+    background-color: rgb(100,100,100);
+}
+
+.ShopItemLevelSelected{
+    height: 8px;
+    width: 22px;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 31);
+}
+
+.ShopItem{
+    height: 100%;
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: background-color .4s;
+}
+
+.ShopItem:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.ShopItem:hover .ShopItemImg{
+    background-size: 105% 105%;
+}
+
+.ShopItemImg{
+    height: 60%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: background-size .3s;
+}
+
+.ShopItemInfo{
+    height: 35%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.ShopItemTitle{
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.ShopItemDesc{
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.ShopItemButton{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ShopItemButton:hover{
+    background-color: rgba(173, 173, 173, 0.753);
+}
+
+.ShopItemType{
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+
+.ShopItemButtonIcon{
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width:750px){
+
+    .Shop{
+        height: 600px;
+    }
+
+    .ShopContentTitle{
+        font-size: 27px;
+    }
+
+    .ShopItem{
+        min-width: 300px;
+        height: 85%;
+    }
+
+    .ShopItemTitle{
+        font-size: 18px;
+    }
+
+    .ShopItemDesc{
+        font-size: 15px;
+    }
+
+    .ShopItemType{
+        font-size: 15px;
+    }
+
+    .ShopItemCarousel{
+        overflow-x:scroll;
+        padding-right: 0px;
+        padding-left: 20px;
+        margin-top: 30px;
+    }
+
+    .ShopItemIndicator{
+        display: none;
+    }
+
+
+
+    .ShopContentButtons{
+        display: none;
+    }
+}
+
+.Discover{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.DiscoverCrumb{
+    font-size: 48px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.DiscoverView{
+    width: 70%;
+    height: 19vw;
+    max-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.DiscoverItem{
+    height: 100%;
+    width: 31.5%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: 120% 100%;
+    background-position: center;
+    cursor: pointer;
+    transition: background-size .35s;
+}
+
+.DiscoverItemContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0),rgba(29, 29, 29, 0.884));
+}
+
+.DiscoverItem:hover{
+    background-size: 125% 105%;
+}
+
+.DItem1{
+    background-image: url("./Images/discover1.PNG");
+}
+
+.DItem2{   
+    background-image: url("./Images/discover2.PNG");
+}
+
+.DItem3{
+    background-image: url("./Images/discover3.PNG");
+}
+
+.DiscoverContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin-bottom: 8%;
+}
+
+.DiscoverItemFont{
+    font-family: 'Roboto';
+    color:white;
+    font-size: 20px;
+}
+
+@media (max-width:950px) {
+    .DiscoverView{
+        flex-direction: column;
+        width: 90%;
+        height: 150vw;
+        max-height: none;
+    }
+
+    .DiscoverItem{
+        width: 100%;
+        height: 31.5%;
+        background-size: 100% 140%;
+    }
+
+    .DiscoverItem:hover{
+        background-size: 105% 145%;
+    }
+}
+
+.Footer{
+    width: 100%;
+    min-height: 1000px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14,20,24);
+}
+
+.FooterContent{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterContentItem1{
+    margin-bottom: 50px;
+}
+
+.FooterContentTitle{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 27px;
+    color: white;
+}
+
+.FooterContentText{
+    font-size: 17px;
+    font-family: 'Roboto';
+    color: white;
+}
+
+.FooterFlag{
+    width: 38px;
+    border-radius: 200px;
+    border: 1px solid grey;
+}
+
+.ChangeLanguage{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.FooterContentLayout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    margin-top: 20px;
+}
+
+.FooterContentItem2{
+    min-height: 160px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.FooterContentSection{
+    width: 342px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.FooterContentSection2{
+    width: 470px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterSectionText{
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: white;
+    margin-top: 15px;
+    margin-bottom: auto;
+}
+
+.FooterSectionButton{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.FooterSectionButtons{
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.FSB{
+    min-height: 60px;
+    min-width: 60px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.FSB svg {
+    width: 50%;
+    height: 50%;   
+}
+
+#FacebookDiv:hover{
+    background-color: rgb(34, 88, 236);
+}
+
+#InstagramDiv:hover{
+    background-color: rgb(235, 0, 90);
+}
+
+#PinterestDiv:hover{
+    background-color: rgb(216, 22, 22);
+}
+
+#YoutubeDiv:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+#TwitterDiv:hover{
+    background-color: rgb(55, 128, 211);
+}
+
+#LinkedinDiv:hover{
+    background-color: rgb(33, 85, 228);
+}
+
+.FooterSectionArrow{
+    width: 40px;
+}
+
+.FooterSectionButtonFont{
+    font-family: 'Roboto';
+    font-size: 21px;
+}
+
+.FooterContentItem3{
+    height: 25%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+
+.FooterSectionDisplay{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.FooterContentSection3{
+    width: 31.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.FooterSectionText3{
+    font-size: 20px;
+    text-align: start;
+    font-family: 'Roboto';
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+    margin-top: 25px;
+}
+
+.FooterSectionText3:hover{
+    color:rgb(188, 20, 20);
+}
+
+.FooterCopyright{
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 950px) {
+    .FooterContentItem1{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .FooterContentItem2{
+        flex-direction: column;
+    }
+
+    .FooterContentSection{
+        margin-bottom: 45px;
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .FSB{
+        margin-bottom: 15px;
+    }
+
+    .FooterContentSection2{
+        width: 100%;
+    }
+
+    .FooterContentItem2{
+        align-items: start;
+    }
+
+    .FooterContentSection3{
+        width: 100%;
+    }
+
+    .FooterContentTitle{
+        font-size: 22px;
+    }
+
+    .FooterSectionDisplay{
+        flex-direction: column;
+    }
+
+    .FooterSectionText3{
+        font-size: 18px;
+    }
+}
